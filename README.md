@@ -8,7 +8,7 @@ Allgemeine Hinweise
 
 ## Allgemeine Hinweise   
 * 2er Arbeit. Einer- oder Dreiergruppen nur mit Absprache. Teilen Sie die Arbeiten sinnvoll auf, sodass beide Teampartner ausreichend profitieren.
-* [Einschreibeliste](docs.google.com/spreadsheets/d/1djq2TvrsdmFKS-ntSFRQDamJKuYO6rwIC9NZIAkRgFw/edit#gid=0)
+* [Einschreibeliste](http://docs.google.com/spreadsheets/d/1djq2TvrsdmFKS-ntSFRQDamJKuYO6rwIC9NZIAkRgFw/edit#gid=0)
 
 ## Aufgabenbeschreibung
 Ihre Aufgabe ist es, einen Wikipraktika-Artikel über das Thema Taschenrechner zu erstellen. Dafür müssen Sie ein gültiges HTML-Dokument und ein der Visualisierungsvorlage entsprechendes Styling mit CSS erstellen. Zusätzlich müssen Sie die die Logik für den vorgegeben Taschenrechner implementieren und diesen in Ihren Artikel einbinden.
