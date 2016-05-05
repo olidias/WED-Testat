@@ -12,10 +12,33 @@
 body {
 	font-size: 1rem;
 	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+	margin: 2.5rem;
 }
-
-
-
+nav{
+	border: 1px solid #0060A0;
+	margin-left: -0.75rem;
+}
+header{
+	margin-bottom: 1rem;
+}
+header > h1{
+	font-size: 2.5rem;
+	vertical-align: middle;
+	color: white;
+	background-color: #0060A0;
+	height: 5rem;
+	padding-top: 1rem;
+	padding-left: 7.5rem;
+}
+header > h2{
+	margin-top: 2.5rem;
+}
+h1 > img{
+	padding: 0.75rem;
+	margin-top: -1.2rem;
+	margin-left:-7.5rem;
+	position: absolute;
+}
 /* images */
 
 
@@ -25,7 +48,16 @@ body {
 
 
 /* lists */
-
+ul{
+	list-style-type: none;
+	margin-left: 0.75rem;
+}
+ul:nth-child(1){
+	margin-top: 0.75rem;
+}
+li > a > img{
+	margin-right: 0.5rem;
+}
 
 
 /* table */
