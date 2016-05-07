@@ -40,18 +40,30 @@
 					</ul>
 					<li>In anderen Sprachen</li>
 					<ul>
-						<li><a href="#"> <img src="../media/flag-it.svg" height="15" width="25"/>Italiano</a></li>
-						<li><a href="#"> <img src="../media/flag-fr.svg" height="15" width="25"/>Francais</a></li>
-						<li><a href="#"> <img src="../media/flag-en.svg" height="15" width="25"/>English</a></li>
+						<li><a hreflang="it" href="it/">Italiano</a></li>
+						<li><a hreflang="fr" href="fr/">Francais</a></li>
+						<li><a hreflang="en" href="en/">English</a></li>
 					</ul>
 				</ul>
 			</nav>
 
 
 		<main>
-			<h1>Taschenrechner</h1>
+			<!-- Schriftgrössenwechsler: optionale Aufgabe -->
+			<form id="font-size-form">
+				<label for="font-slider">Schriftgrösse</label>
+				<input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
+					   id="font-slider" />
+				<output name="font-size" id="font-size">1</output>
+			</form>
+
+			<header>
+				<h2>Taschenrechner</h2>
+			</header>
 			<section id="Taschenrechner">
-				<h2>1 Taschenrechner</h2>
+				<header>
+					<h3>Taschenrechner</h3>
+				</header>
 					<p>Ein Taschenrechner ist eine tragbare, handliche elektronische Rechenmaschine,
 						mit deren Hilfe numerische Berechnungen ausgeführt werden können.
 						Einige neuere technisch-wissenschaftliche Taschenrechner beherrschen auch symbolische Mathematik mittels eines Computeralgebrasystems (CAS),
@@ -62,17 +74,15 @@
 						LC-Displays als Anzeige und werden von einer Batterie oder Solarzelle mit Strom versorgt.
 					</p>
 					<figure>
-						<img src="../media/900px-SCM_Marchant_calculator.jpg" width="410" height="295" style="float: left">
-						<!-- breite der figcaption muss an bildbreite angepasst werden, css?-->
-						<figcaption style="float: left">
-							<div>
-								1960s SCM Marchant calculator: ../media/900px-SCM_Marchant_calculator.jpg
-								<a href="commons.wikimedia.org/wiki/User:Bilby">By Bilby</a> - Own work, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>,<br>
+						<img src="../media/900px-SCM_Marchant_calculator.jpg" width="360" height="245">
+						<figcaption>
+								<a href="commons.wikimedia.org/wiki/User:Bilby">By Bilby</a> - Own work, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>,
 								https://commons.wikimedia.org/w/index.php?curid=10980797
-							</div>
 						</figcaption>
 					</figure>
-					<h3>Geschichte</h3>
+					<header>
+						<h4>Geschichte</h4>
+					</header>
 					<p>
 						Bereits vor der Einführung der elektronischen Taschenrechner gab es einen Bedarf nach
 						tragbaren Rechenhilfen. Dieser wurde mit mechanischen Taschenrechnern und Rechenschiebern
@@ -117,7 +127,7 @@
 						Vor allem Hewlett Packard und Texas Instruments entwickelten ab 1974 auch programmierbare
 						Taschenrechner.
 					</p>
-				<h3>Numerische Genauigkeit</h3>
+				<h4>Numerische Genauigkeit</h4>
 					<p>
 						Auch wenn heutige Taschenrechner im Regelfall kaum Programmfehler bei einfachen Berechnungen
 						aufweisen, lassen sich zwischen verschiedenen Taschenrechnermodellen unterschiedliche
@@ -135,16 +145,20 @@
 					</p>
 					<div>
 						<small>
-						Source Wikipedia: de.wikipedia.org/wiki/Taschenrechner (https://de.wikipedia.org/wiki/Taschenrechner)
+						Source Wikipedia: <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
 						</small>
 					</div>
 			</section>
 			<section id="Demonstration">
-				<h2>2 Demonstration</h2>
+				<header>
+					<h3>Demonstration</h3>
+				</header>
 				<!-- TODO: Taschenrechner js -->
 			</section>
 			<section id="Bedienung">
-				<h2>3 Bedienung des TI-Nspire CX CAS</h2>
+				<header>
+					<h3>Bedienung des TI-Nspire CX CAS</h3>
+				</header>
 				<figure>
 					<video role="application" poster="../media/ti-nspire-cx-cas.png">
 						<source src="../media/TI-Nspire CX CAS 3D Model.mp4"/>
@@ -168,36 +182,38 @@
 					<time datetime="2016-02-11 12:45">Donnerstag, 11.Februar, 12:45</time>
 			</footer>
 			<section id="Varianten">
-				<h2>4 Taschenrechnervarianten</h2>
+				<header>
+					<h3>Taschenrechnervarianten</h3>
+				</header>
 				<div>
-					<ul>
-						<h4>Einfach</h4>
-						<li>Grundrechenarten, Prozentrechnung</li>
-						<h4>Finanzwirtschaft</h4>
-						<li>Zinsrechnung</li>
-						<li>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988)</li>
-						<h4>Boolesche Rechnungen</h4>
-						<li>Rechnen mit Dual-, Oktal- und Hexadezimalzahlen, z. B. TI Programmer)</li>
-						<h4>Wissenschaftlich</h4>
-						<li>Winkelfunktionen, Logarithmus, mathematische Statistik, …</li>
-						<li>zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte</li>
-						<h4>Programmierbarer Taschenrechner</h4>
-						<h4>Grafikfähiger Taschenrechner</h4>
-						<li>Funktions-/Kurvendarstellung</li>
-						<li>ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</li>
-						<li>1989 bis heute die HP-48-49-Reihe</li>
-						<li>ab 1993 der TI-82 und seine Nachfolger</li>
-						<li>aktuell der TI-84 Plus und TI-Nspire</li>
-						<li>Grafikrechner sind typischerweise auch programmierbar.</li>
-						<h4>Computeralgebra-Rechner</h4>
-						<li>grafikfähige Taschenrechner mit eingebautem Computeralgebra-Kern<li>
-						<li>erstes verbreitetes Gerät war der HP-48 von Hewlett-Packard (ab 1989),
+					<dl>
+						<dt>Einfach</dt>
+						<dd>Grundrechenarten, Prozentrechnung</dd>
+						<dt>Finanzwirtschaft</dt>
+						<dd>Zinsrechnung</dd>
+						<dd>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988)</dd>
+						<dt>Boolesche Rechnungen</dt>
+						<dd>Rechnen mit Dual-, Oktal- und Hexadezimalzahlen, z. B. TI Programmer)</dd>
+						<dt>Wissenschaftlich</dt>
+						<dd>Winkelfunktionen, Logarithmus, mathematische Statistik, …</dd>
+						<dd>zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte</dd>
+						<dt>Programmierbarer Taschenrechner</dt>
+						<dt>Grafikfähiger Taschenrechner</dt>
+						<dd>Funktions-/Kurvendarstellung</dd>
+						<dd>ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</dd>
+						<dd>1989 bis heute die HP-48-49-Reihe</dd>
+						<dd>ab 1993 der TI-82 und seine Nachfolger</dd>
+						<dd>aktuell der TI-84 Plus und TI-Nspire</dd>
+						<dd>Grafikrechner sind typischerweise auch programmierbar.</dd>
+						<dt>Computeralgebra-Rechner</dt>
+						<dd>grafikfähige Taschenrechner mit eingebautem Computeralgebra-Kern</dd>
+						<dd>erstes verbreitetes Gerät war der HP-48 von Hewlett-Packard (ab 1989),
 							spätere Geräte zum Beispiel TI-92(+) (ab 1995), TI-89 (ab
 							1998) und Voyage 200 (ab 2002), TI-Nspire CAS (ab 2007)
 							von Texas Instruments, ClassPad 300 von Casio, HP 49g+ von
 							Hewlett-Packard.
-						</li>
-					</ul>
+						</dd>
+					</dl>
 				</div>
 				<div id="not bold">
 					<!-- TODO: find better word for "not bold" -->
@@ -210,13 +226,7 @@
 				Zuletzt geändert von Gabriela Kant</small>
 				<time datetime="2016-2-11 10:09 ">Donnerstag, 11. Februar 2016, 10:09</time>
 			</footer>
-			<!-- Schriftgrössenwechsler: optionale Aufgabe -->
-			<form id="font-size-form">
-				<label for="font-slider">Schriftgrösse</label>
-				<input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
-					   id="font-slider" />
-				<output name="font-size" id="font-size">1</output>
-			</form>
+
 
 			<!-- TODO -->
 		</main>
