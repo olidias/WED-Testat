@@ -42,6 +42,7 @@ h3::before{
 	counter-increment:h3;
 	content: counter(h3) " ";
 }
+
 h1 > a > img{
 	padding: 0.75rem;
 	margin-top: -1.2rem;
@@ -59,17 +60,35 @@ footer > time{
 }
 figcaption{
 	color: gray;
+	width: 380px;
 }
-
-figcaption > a {
+figure a {
 	color: black;
+}
+figure > p {
+	margin-top: 1rem;
 }
 
 #Taschenrechner > figure{
 	float:left;
 	position: relative;
-	width: 400px;
-	height: 350px;
+	margin-right: 1rem;
+	width: 307px;
+	height: 310px;
+}
+figure > img{
+	width: 307px;
+	height: 222px;
+}
+figure > video{
+	width: 100%;
+}
+figure > object{
+	width: 100%;
+}
+#calcTricks > figure > iframe{
+	width: 100%;
+	/** TODO: Correct height of IFrame, no return in figcaption*/
 }
 /* images */
 a[hreflang='it']::before {
@@ -100,8 +119,15 @@ a[hreflang='en']::before {
 	margin-right: 0.5em;
 }
 /* text */
+p{
+	margin-bottom:1rem;
+}
 small > a{
 	color: black;
+}
+small > time{
+	float: right;
+	padding-right: 0.5em;
 }
 
 /* lists */
@@ -122,9 +148,35 @@ dl > dd{
 dd:before{
 	content: "⌖ ";
 }
+#definitionListCaption{
+	color: gray;
+}
+ol > li{
+	margin-left: 1rem;
+}
 /* table */
-
-
+table{
+	width: 100%;
+	border-collapse:collapse;
+}
+thead{
+	color: white;
+	background-color: #0060A0;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
+#tableCaption{
+	text-align: center;
+}
+tr{
+	height: 2.5rem;
+	text-align: center;
+}
+tr:nth-child(2n){
+	background-color: #DBE6EF;
+	border-top: 1px solid #BDD0E4;
+	border-bottom: 1px solid #BDD0E4;
+}
 
 /* forms */
 

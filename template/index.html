@@ -49,14 +49,20 @@
 
 
 		<main>
-<<<<<<< HEAD
+			<!-- Schriftgrössenwechsler: optionale Aufgabe -->
+			<form id="font-size-form">
+				<label for="font-slider">Schriftgrösse</label>
+				<input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
+					   id="font-slider" />
+				<output name="font-size" id="font-size">1</output>
+			</form>
 			<section>
 				<header>
-					<h1>Taschenrechner</h1>
+					<h2>Taschenrechner</h2>
 				</header>
 				<section id="Taschenrechner">
 					<header>
-						<h2>1 Taschenrechner</h2>
+						<h3>Taschenrechner</h3>
 					</header>
 						<p>Ein Taschenrechner ist eine tragbare, handliche elektronische Rechenmaschine,
 							mit deren Hilfe numerische Berechnungen ausgeführt werden können.
@@ -68,17 +74,17 @@
 							LC-Displays als Anzeige und werden von einer Batterie oder Solarzelle mit Strom versorgt.
 						</p>
 						<figure>
-							<img src="../media/900px-SCM_Marchant_calculator.jpg" width="410" height="295" style="float: left">
-							<!-- breite der figcaption muss an bildbreite angepasst werden, css?-->
-							<figcaption style="float: left">
+							<img src="../media/900px-SCM_Marchant_calculator.jpg">
+							<figcaption>
 								<div>
-									1960s SCM Marchant calculator: ../media/900px-SCM_Marchant_calculator.jpg
 									<a href="commons.wikimedia.org/wiki/User:Bilby">By Bilby</a> - Own work, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>,<br>
 									https://commons.wikimedia.org/w/index.php?curid=10980797
 								</div>
 							</figcaption>
 						</figure>
-					<h3>Geschichte</h3>
+					<header>
+						<h4>Geschichte</h4>
+					</header>
 						<p>
 							Bereits vor der Einführung der elektronischen Taschenrechner gab es einen Bedarf nach
 							tragbaren Rechenhilfen. Dieser wurde mit mechanischen Taschenrechnern und Rechenschiebern
@@ -123,7 +129,9 @@
 							Vor allem Hewlett Packard und Texas Instruments entwickelten ab 1974 auch programmierbare
 							Taschenrechner.
 						</p>
-					<h3>Numerische Genauigkeit</h3>
+					<header>
+						<h4>Numerische Genauigkeit</h4>
+					</header>
 						<p>
 							Auch wenn heutige Taschenrechner im Regelfall kaum Programmfehler bei einfachen Berechnungen
 							aufweisen, lassen sich zwischen verschiedenen Taschenrechnermodellen unterschiedliche
@@ -141,31 +149,33 @@
 						</p>
 						<div>
 							<small>
-							Source Wikipedia: de.wikipedia.org/wiki/Taschenrechner (https://de.wikipedia.org/wiki/Taschenrechner)
+								Source Wikipedia: <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
 							</small>
 						</div>
 				</section>
 				<section id="Demonstration">
-					<h2>2 Demonstration</h2>
+					<header>
+						<h3>Demonstration</h3>
+					</header>
 					<!-- TODO: Taschenrechner js -->
 				</section>
 				<section id="Bedienung">
 					<header>
-						<h2>3 Bedienung des TI-Nspire CX CAS</h2>
+						<h3>Bedienung des TI-Nspire CX CAS</h3>
 					</header>
 					<figure>
-						<video controls width="640" height="400" role="application" poster="../media/ti-nspire-cx-cas.png">
+						<video controls role="application" poster="../media/ti-nspire-cx-cas.png">
 							<source src="../media/TI-Nspire CX CAS 3D Model.mp4"/>
 							<source src="../media/TI-Nspire CX CAS 3D Model.webm"/>
 							<track src="../media/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en" label="English" default />
 						</video>
 						<figcaption>
 							<small>TI-Nspire CX CAS Demonstration</small>
-							<p>
-								Von TheConnerdy, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>,
-							<a href="https://www.youtube.com/watch?v=6gKkz4VkSgk">via Youtube</a>
-							</p>
 						</figcaption>
+						<p>
+							Von TheConnerdy, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>,
+							<a href="https://www.youtube.com/watch?v=6gKkz4VkSgk">via Youtube</a>
+						</p>
 					</figure>
 					<footer>
 						<small>
@@ -175,7 +185,7 @@
 					</footer>
 							<section id="Varianten">
 								<header>
-									<h3>4 Taschenrechnervarianten</h3>
+									<h3>Taschenrechnervarianten</h3>
 								</header>
 								<div>
 									<dl>
@@ -207,8 +217,7 @@
 										</dd>
 									</dl>
 								</div>
-								<div id="not bold">
-									<!-- TODO: find better word for "not bold" -->
+								<div id="definitionListCaption">
 									<small>
 										Taschenrechnervarianten, Source Wikipedia: <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
 									</small>
@@ -222,13 +231,12 @@
 					</footer>
 				<section id="Zeitgewinn">
 					<header>
-						<h2>5 Zeitgewinn</h2>
+						<h3>Zeitgewinn</h3>
 					</header>
-					<figure>
-						<figcaption>Zeitgewinn durch Benutzung eines Taschenrechners</figcaption>
+					<div id="tableCaption">Zeitgewinn durch Benutzung eines Taschenrechners</div>
 						<table>
 							<colgroup>
-								<col span="1" class="pane"
+								<col span="1" class="pane">
 							</colgroup>
 							<thead>
 							<tr>
@@ -247,11 +255,9 @@
 							<tr>
 								<th>Modulo</th><td>5</td><td>20</td><td>65</td>
 							</tr>
-							<!-- "1" in following table row should be centered -->
 							<tr>
 								<th>Quersumme</th><td colspan="2">1</td><td>2</td>
 							</tr>
-							<!-- same with text in following row-->
 							<tr>
 								<th>Wurzelziehen</th><td colspan="3">Kaum machbar von Hand</td>
 							</tr>
@@ -259,6 +265,7 @@
 								<th>Potenzieren</th><td>25</td><td>75</td><td>550</td>
 							</tr>
 						</table>
+					<figure>
 						<object data="../media/zeitgewinn.svg" role="application"></object>
 					</figure>
 					<footer>
@@ -268,14 +275,12 @@
 						</small>
 					</footer>
 				</section>
-				<section>
+				<section id="calcTricks">
 					<header>
-						<h2>6 iPhone calculator tricks</h2>
+						<h3>iPhone calculator tricks</h3>
 					</header>
 					<figure>
-						<!-- control videosize through css? -->
-						<iframe width="1280" height="720" src="https://www.youtube.com/embed/a7rcVgb41-0" allowfullscreen></iframe>
-						<!-- ...not bold -->
+						<iframe src="https://www.youtube.com/embed/a7rcVgb41-0" allowfullscreen></iframe>
 						<figcaption>iPhone Calculator Tricks  on YouTube: <a href="https://www.youtube.com/watch?v=a7rcVgb41-0">youtube.com/watch?v=a7rcVgb41-0</a></figcaption>
 					</figure>
 					<footer>
@@ -287,7 +292,7 @@
 				</section>
 				<section>
 					<header>
-						<h2>7 Die besten und schlechtesten Taschenrechner</h2>
+						<h3>Die besten und schlechtesten Taschenrechner</h3>
 					</header>
 					<p>In einer 2014 durchgeführten Benutzerbefragung schnitten die Modelle von Casino am Besten ab:</p>
 					<ol>
@@ -295,7 +300,7 @@
 						<li>Casino TZZ</li>
 						<li>Casino Basic</li>
 					</ol>
-					<p>Am schlechtesn schnitten die Geräte von HG ab:</p>
+					<p>Am schlechtesten schnitten die Geräte von HG ab:</p>
 					<ol start="78" reversed>
 						<li>HG Productive</li>
 						<li>HG Calc++</li>
@@ -310,7 +315,7 @@
 				</section>
 				<section>
 					<header>
-						<h2>8 Taschenrechner suchen nach Modell</h2>
+						<h3>Taschenrechner suchen nach Modell</h3>
 					</header>
 					<form>
 						<datalist id="searches">
@@ -331,7 +336,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Neuen Autor registrieren</h1>
+					<h2>Neuen Autor registrieren</h2>
 				</header>
 				<form name="new-author">
 					<fieldset id="autor">
@@ -363,28 +368,22 @@
 						<textarea name="textbox" id="textbox"></textarea>
 						<label for="upload">Profilbilder</label>
 						<input type="file" name="upload" id="upload" multiple />
-					<fieldset id="rechtliches">
-						<legend>Rechtliches</legend>
-						<input type="checkbox" required id="texturheber">
-						<label for="texturheber">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</label>
-						<input type="checkbox" required id="bildurheber">
-						<label for="bildurheber"> Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</label>
-						<input type="checkbox" required id="goodwill">
-						<label for="goodwill">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
-							eingereichte Medien Bilder nicht manipuliert wurden</label>
+						<fieldset id="rechtliches">
+							<legend>Rechtliches</legend>
+							<input type="checkbox" required id="texturheber">
+							<label for="texturheber">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</label>
+							<input type="checkbox" required id="bildurheber">
+							<label for="bildurheber"> Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</label>
+							<input type="checkbox" required id="goodwill">
+							<label for="goodwill">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
+								eingereichte Medien Bilder nicht manipuliert wurden</label>
+						</fieldset>
 					</fieldset>
 					<button type="submit">Account anlegen</button>
 					<button type="reset">Eingaben zurücksetzen</button>
 				</form>
 			</section>
 
-			<!-- Schriftgrössenwechsler: optionale Aufgabe -->
-			<form id="font-size-form">
-				<label for="font-slider">Schriftgrösse</label>
-				<input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
-					   id="font-slider" />
-				<output name="font-size" id="font-size">1</output>
-			</form>
 		</main>
 		<footer>
 			<address>Bahnhofstrasse 42, 8000 Zürich</address>
