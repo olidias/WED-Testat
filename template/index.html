@@ -328,9 +328,7 @@
 							<option value="HG GO-ON">HG GO-ON</option>
 						</datalist>
 						<input type="text" id="search" value="" name="searchinput" aria-label="suche" list="searches"/>
-						<button type="submit" value="Search">
-							Search
-							<img src="../media/icon-search.svg" height="189" width="189" alt="Search Icon"/>
+						<button id="calculatorSearchBtn" type="submit" value="Search">
 						</button>
 					</form>
 				</section>
@@ -342,21 +340,21 @@
 				<form name="new-author">
 					<fieldset id="autor">
 						<legend>Autor</legend>
-						<label>Herr
+						<label class="inputLabels">Herr
 							<input type="radio" name="anrede" value="herr" checked/>
 						</label>
-						<label>Frau
+						<label class="inputLabels">Frau
 							<input type="radio" name="anrede" value="frau"/>
 						</label>
-						<label for="name">Name</label>
-						<input type="text" name="name" required id="name"/>
-						<label for="email">E-Mail</label>
-						<input type="text" name="email" id="email"/>
-						<label for="homepage">Webseite</label>
-						<input type="url" name="website" required pattern="https?://.+" id="homepage"/>
-						<label for="birthdate">Geburtsdatum</label>
-						<input type="text" name="birthdate" required id="birthdate"/>
-						<label for="nationality">Nationalität</label>
+						<label for="name" class="inputLabels">Name</label>
+						<input type="text" name="name" required id="name" class="textInput"/>
+						<label for="email" class="inputLabels">E-Mail</label>
+						<input type="text" name="email" id="email" class="textInput"/>
+						<label for="homepage" class="inputLabels">Webseite</label>
+						<input type="url" name="website" required pattern="https?://.+" id="homepage" class="textInput"/>
+						<label for="birthdate" class="inputLabels">Geburtsdatum</label>
+						<input type="text" name="birthdate" required id="birthdate" class="textInput"/>
+						<label for="nationality" class="inputLabels">Nationalität</label>
 						<select name="nationality" id="nationality" required size="1">
 							<option value="" disabled selected>--Wählen--</option>
 							<option value="switzerland">Switzerland</option>
@@ -365,18 +363,18 @@
 							<option value="italy" >Italy</option>
 							<option value="france" >France</option>
 						</select>
-						<label for="textbox">Profiltext</label>
-						<textarea name="textbox" id="textbox"></textarea>
-						<label for="upload">Profilbilder</label>
+						<label for="textbox" class="inputLabels">Profiltext</label>
+						<textarea name="textbox" id="textbox" class="textInput"></textarea>
+						<label for="upload" class="inputLabels">Profilbilder</label>
 						<input type="file" name="upload" id="upload" multiple />
 						<fieldset id="rechtliches">
 							<legend>Rechtliches</legend>
-							<input type="checkbox" required id="texturheber">
-							<label for="texturheber">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</label>
-							<input type="checkbox" required id="bildurheber">
-							<label for="bildurheber"> Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</label>
-							<input type="checkbox" required id="goodwill">
-							<label for="goodwill">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
+							<input type="checkbox" required id="texturheber" class="textInput">
+							<label for="texturheber" class="inputLabels">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</label>
+							<input type="checkbox" required id="bildurheber" class="textInput">
+							<label for="bildurheber" class="inputLabels"> Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</label>
+							<input type="checkbox" required id="goodwill" class="textInput">
+							<label for="goodwill" class="inputLabels">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
 								eingereichte Medien Bilder nicht manipuliert wurden</label>
 						</fieldset>
 					</fieldset>

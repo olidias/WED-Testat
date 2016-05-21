@@ -95,22 +95,34 @@ figure > object{
 	background-color: #00609F;
 	color: white;
 	vertical-align: center;
-	padding: .25em;
+	padding: .25em .5em .25em .5em;
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-
+}
+#calculatorSearchBtn:hover{
+	color: #88B8CE;
+}
+#calculatorSearchBtn:active{
+	webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.76);
+	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.76);
+	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.76);
 }
 #calculatorSearchBtn::before{
-	height: 20px;
-	width: 20px;
+	height: 15px;
+	width: 15px;
 	display:inline-block;
 	background: url(../../media/icon-search.svg);
 	content:"";
 	background-size:100%;
 }
 #calculatorSearchBtn::after{
-	content: "Search";
+	content:"Search";
+	padding-left: 0.25em;
+}
+#Demonstration > object{
+	width: 100%;
+	height: calc(56vw - 1rem);
 }
 
 /* images */
@@ -131,7 +143,7 @@ a[hreflang='fr']::before {
 	background-size:100%;
 	content: " ";
 	margin-right: 0.5em;
-}§
+}
 a[hreflang='en']::before {
 	display:inline-block;
 	background:url("../../media/flag-en.svg");
@@ -152,7 +164,10 @@ small > time{
 	float: right;
 	padding-right: 0.5em;
 }
-
+#textbox{
+	height: 200px;
+	width: 98%;
+}
 /* lists */
 ul{
 	list-style-type: none;
@@ -205,12 +220,30 @@ tr:nth-child(2n){
 form > fieldset{
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
-	border-radius: 6px;;
+	border-radius: 6px;
+	padding-left: 1rem;
 }
-#autor > label{
+.textInput{
+	height: 25px;
+	width: 98%;
+	background-color: #F5F4F3;
+	border-style: none;
+	border-bottom: 2px solid black;
+	color: black;
+	padding: 1rem 1rem 1rem 1rem;
+	float:left;
+}
+.inputLabels{
+	width: 98%;
+	float:left;
 	margin-top: 1rem;
-	float: left;
-	width: 100%;
+}
+.textInput:focus{
+	border-bottom: 2px solid #0060A0;
+	color: #0060A0;
+}
+#nationality{
+	width: 98%;
 }
 
 #font-size-form {
