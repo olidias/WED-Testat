@@ -88,8 +88,31 @@ figure > object{
 }
 #calcTricks > figure > iframe{
 	width: 100%;
-	/** TODO: Correct height of IFrame, no return in figcaption*/
+	height: calc(56vw - 1rem);
 }
+#calculatorSearchBtn{
+	border-style: none;
+	background-color: #00609F;
+	color: white;
+	vertical-align: center;
+	padding: .25em;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+
+}
+#calculatorSearchBtn::before{
+	height: 20px;
+	width: 20px;
+	display:inline-block;
+	background: url(../../media/icon-search.svg);
+	content:"";
+	background-size:100%;
+}
+#calculatorSearchBtn::after{
+	content: "Search";
+}
+
 /* images */
 a[hreflang='it']::before {
 	display:inline-block;
@@ -108,7 +131,7 @@ a[hreflang='fr']::before {
 	background-size:100%;
 	content: " ";
 	margin-right: 0.5em;
-}
+}§
 a[hreflang='en']::before {
 	display:inline-block;
 	background:url("../../media/flag-en.svg");
@@ -151,8 +174,8 @@ dd:before{
 #definitionListCaption{
 	color: gray;
 }
-ol > li{
-	margin-left: 1rem;
+ol{
+	list-style-position: inside;
 }
 /* table */
 table{
@@ -179,8 +202,16 @@ tr:nth-child(2n){
 }
 
 /* forms */
-
-
+form > fieldset{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;;
+}
+#autor > label{
+	margin-top: 1rem;
+	float: left;
+	width: 100%;
+}
 
 #font-size-form {
 	float: right;
