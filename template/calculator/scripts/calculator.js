@@ -44,7 +44,12 @@ document.calculator = {
             document.calculator.result = document.calculator.oldNumber - document.calculator.newNumber;
         }
         if (document.calculator.operator == "/") {
-            document.calculator.result = document.calculator.oldNumber / document.calculator.newNumber;
+            if (document.calculator.newNumber == 0) {
+                document.calculator.result = "Division by Zero";
+            }
+            else {
+                document.calculator.result = document.calculator.oldNumber / document.calculator.newNumber;
+            }
         }
         if (document.calculator.operator == "*") {
             document.calculator.result = document.calculator.oldNumber * document.calculator.newNumber;
@@ -52,7 +57,13 @@ document.calculator = {
         document.calculator.oldNumber = "";
         document.calculator.newNumber = document.calculator.result;
         document.calculator.operator = "";
-        document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+        if (document.calculator.result == "Division by Zero") {
+            document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+            document.calculator.newNumber = "";
+        }
+        else {
+            document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+        }
     }
 };
 
@@ -63,6 +74,7 @@ document.ui = {
     init: function () {
         this.input = document.querySelector("#input");
         this.output = document.querySelector("#output");
+        this.input.innerHTML = "Welcome";
         this.keys = document.querySelectorAll("button[type=button]");
         this.buttons = document.ui.keys[0].parentElement;
         this.buttons.addEventListener('click', document.calculator.click);
