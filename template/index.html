@@ -21,7 +21,7 @@
 				<ul>
 					<li><a href="/de/">Hauptseite</a></li>
 					<li><a href="/de/topics/">Themenportale</a></li>
-					<li>Mitmachen</li>
+					<li>Mitmachen
 					<ul>
 						<li><a href="/de/join/enhance-article/calculator">Artikel verbessern</a></li>
 						<li><a href="/de/join/create-article">Neuen Artikel anlegen</a></li>
@@ -31,19 +31,22 @@
 						<li><a href="/de/join/contact">Kontakt</a></li>
 						<li><a href="/de/join/donate">Spenden</a></li>
 					</ul>
-					<li>Werkzeuge</li>
-					<ul>
-						<li><a href="/de/calculator/tools/links-to-this-page Links">Links auf dieser Seite</a></li>
-						<li><a href="/de/calculator/tools/linked-changes">Änderungen an verlinkten Seiten</a></li>
-						<li><a href="/de/calculator/tools/permanent-link">Permanenter Link</a></li>
-						<li><a href="/de/calculator/tools/cite-article">Artikel zitieren</a></li>
-					</ul>
-					<li>In anderen Sprachen</li>
-					<ul>
-						<li><a hreflang="/it/articles/calculator" href="it/">Italiano</a></li>
-						<li><a hreflang="/fr/articles/calculator" href="fr/">Francais</a></li>
-						<li><a hreflang="/en/articles/calculator" href="en/">English</a></li>
-					</ul>
+					</li>
+					<li>Werkzeuge
+						<ul>
+							<li><a href="/de/calculator/tools/links-to-this-page Links">Links auf dieser Seite</a></li>
+							<li><a href="/de/calculator/tools/linked-changes">Änderungen an verlinkten Seiten</a></li>
+							<li><a href="/de/calculator/tools/permanent-link">Permanenter Link</a></li>
+							<li><a href="/de/calculator/tools/cite-article">Artikel zitieren</a></li>
+						</ul>
+					</li>
+					<li>In anderen Sprachen
+						<ul>
+							<li><a hreflang="/it/articles/calculator" href="it/">Italiano</a></li>
+							<li><a hreflang="/fr/articles/calculator" href="fr/">Francais</a></li>
+							<li><a hreflang="/en/articles/calculator" href="en/">English</a></li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 
@@ -173,10 +176,10 @@
 						<figcaption>
 							<small>TI-Nspire CX CAS Demonstration</small>
 						</figcaption>
-						<p>
+						<div>
 							Von TheConnerdy, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>,
 							<a href="https://www.youtube.com/watch?v=6gKkz4VkSgk">via Youtube</a>
-						</p>
+						</div>
 					</figure>
 					<footer>
 						<small>
@@ -328,7 +331,7 @@
 							<option value="HG GO-ON">HG GO-ON</option>
 						</datalist>
 						<input type="text" id="search" value="" name="searchinput" aria-label="suche" list="searches"/>
-						<button id="calculatorSearchBtn" type="submit" value="Search">
+						<button id="calculatorSearchBtn" class="stylisedButton" type="submit" value="Search">
 						</button>
 					</form>
 				</section>
@@ -366,25 +369,31 @@
 						<label for="textbox" class="inputLabels">Profiltext</label>
 						<textarea name="textbox" id="textbox" class="textInput"></textarea>
 						<label for="upload" class="inputLabels">Profilbilder</label>
-						<input type="file" name="upload" id="upload" multiple />
-						<fieldset id="rechtliches">
-							<legend>Rechtliches</legend>
-							<input type="checkbox" required id="texturheber" class="textInput">
-							<label for="texturheber" class="inputLabels">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</label>
-							<input type="checkbox" required id="bildurheber" class="textInput">
-							<label for="bildurheber" class="inputLabels"> Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</label>
-							<input type="checkbox" required id="goodwill" class="textInput">
-							<label for="goodwill" class="inputLabels">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
-								eingereichte Medien Bilder nicht manipuliert wurden</label>
-						</fieldset>
+						<input type="file" name="upload" id="upload" multiple class="inputLabels"/>
 					</fieldset>
-					<button type="submit">Account anlegen</button>
-					<button type="reset">Eingaben zurücksetzen</button>
+					<fieldset id="rechtliches">
+						<legend>Rechtliches</legend>
+						<div class="checkboxSeparator">
+							<input type="checkbox" required id="texturheber" >
+							<label for="texturheber">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin</label>
+						</div>
+						<div class="checkboxSeparator">
+							<input type="checkbox" required id="bildurheber">
+							<label for="bildurheber"> Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin</label>
+						</div>
+						<div class="checkboxSeparator">
+							<input type="checkbox" required id="goodwill">
+							<label for="goodwill">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und
+							eingereichte Medien Bilder nicht manipuliert wurden</label>
+						</div>
+					</fieldset>
+					<button type="submit" class="stylisedButton">Account anlegen</button>
+					<button type="reset" class="stylisedButton">Eingaben zurücksetzen</button>
 				</form>
 			</section>
 
 		</main>
-		<footer>
+		<footer id="pagefooter">
 			<address>Bahnhofstrasse 42, 8000 Zürich</address>
 			<p>
 				<a href="url">+055 444 33 22</a>
@@ -398,7 +407,5 @@
 				</small>
 			</p>
 		</footer>
-
-		<!-- TODO -->
 	</body>
 </html>

@@ -49,12 +49,23 @@ h1 > a > img{
 	margin-left:-7.5rem;
 	position: absolute;
 }
-footer{
+#pagefooter{
+	background-color: #0060A0;
+	margin-top: 1rem;
+	color: white;
+	font-style: normal;
+}
+#pagefooter > small> a{
+	text-decoration: none;
+	color: white;
+	border: 1px solid black;
+}
+section > footer{
 	border: 1px dotted black;
 	font-style: italic;
 	margin-top: 1rem;
 }
-footer > time{
+section > footer > time{
 	float: right;
 	margin-right:0.5rem;
 }
@@ -65,7 +76,7 @@ figcaption{
 figure a {
 	color: black;
 }
-figure > p {
+figure > div {
 	margin-top: 1rem;
 }
 
@@ -90,7 +101,7 @@ figure > object{
 	width: 100%;
 	height: calc(56vw - 1rem);
 }
-#calculatorSearchBtn{
+.stylisedButton{
 	border-style: none;
 	background-color: #00609F;
 	color: white;
@@ -99,11 +110,14 @@ figure > object{
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
+	-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.76);
+	-moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.76);
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.76);
 }
-#calculatorSearchBtn:hover{
+.stylisedButton:hover{
 	color: #88B8CE;
 }
-#calculatorSearchBtn:active{
+.stylisedButton:active{
 	webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.76);
 	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.76);
 	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.76);
@@ -157,7 +171,7 @@ a[hreflang='en']::before {
 p{
 	margin-bottom:1rem;
 }
-small > a{
+small > a:not(:last-child){
 	color: black;
 }
 small > time{
@@ -237,6 +251,15 @@ form > fieldset{
 	width: 98%;
 	float:left;
 	margin-top: 1rem;
+}
+.inputLabels:last-child{
+	margin-bottom:1rem;
+}
+.checkboxSeparator {
+	margin-top: 1rem;
+}
+.checkboxSeparator:last-child{
+	margin-bottom: 1rem;
 }
 .textInput:focus{
 	border-bottom: 2px solid #0060A0;
