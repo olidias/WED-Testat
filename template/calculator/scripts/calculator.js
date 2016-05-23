@@ -75,8 +75,8 @@ document.ui = {
         this.input = document.querySelector("#input");
         this.output = document.querySelector("#output");
         this.input.innerHTML = "Welcome";
-        this.keys = document.querySelectorAll("button[type=button]");
-        this.buttons = document.ui.keys[0].parentElement;
+        this.initKey = document.querySelectorAll("button[type=button]")[0].parentElement;
+        this.buttons = document.ui.initKey;
         this.buttons.addEventListener('click', document.calculator.click);
 
     },
