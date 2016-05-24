@@ -16,7 +16,7 @@ body {
 	counter-reset:h3;
 }
 nav{
-	border: 1px solid #0060A0;
+	border: 2px solid #659EC5;
 	margin-left: -0.75rem;
 }
 header{
@@ -55,7 +55,7 @@ h1 > a > img{
 	color: white;
 	font-style: normal;
 }
-#pagefooter > small> a{
+#pagefooter > small > a{
 	text-decoration: none;
 	color: white;
 	border: 1px solid black;
@@ -73,6 +73,13 @@ figcaption{
 	color: gray;
 	width: 380px;
 }
+figcaption > p {
+	margin-top: 1rem;
+	color: black;
+}
+figure{
+	display: block;
+}
 figure a {
 	color: black;
 }
@@ -80,7 +87,7 @@ figure > div {
 	margin-top: 1rem;
 }
 
-#Taschenrechner > figure{
+#taschenrechner > figure{
 	float:left;
 	position: relative;
 	margin-right: 1rem;
@@ -96,10 +103,13 @@ figure > video{
 }
 figure > object{
 	width: 100%;
+	height: calc(56vw - 1.5rem);
 }
-#calcTricks > figure > iframe{
-	width: 100%;
-	height: calc(56vw - 1rem);
+
+iframe{
+	border: 3px solid black;
+	width: 90%;
+	height: calc(86vw - 1.5rem);
 }
 .stylisedButton{
 	border-style: none;
@@ -134,10 +144,6 @@ figure > object{
 	content:"Search";
 	padding-left: 0.25em;
 }
-#Demonstration > object{
-	width: 100%;
-	height: calc(56vw - 1rem);
-}
 
 /* images */
 a[hreflang='it']::before {
@@ -171,8 +177,11 @@ a[hreflang='en']::before {
 p{
 	margin-bottom:1rem;
 }
-small > a:not(:last-child){
+small > a{
 	color: black;
+}
+#pagefooter a{
+	color:white;
 }
 small > time{
 	float: right;
@@ -183,12 +192,15 @@ small > time{
 	width: 98%;
 }
 /* lists */
-ul{
+ul > li > a:hover{
+	text-decoration: none;
+}
+li > a{
+	color: #0060A0;
+}
+ul > li{
 	list-style-type: none;
 	margin-left: 0.75rem;
-}
-ul:nth-child(1){
-	margin-top: 0.75rem;
 }
 dl > dt{
 	color: #0060A0;
