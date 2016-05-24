@@ -60,12 +60,12 @@ h1 > a > img{
 	color: white;
 	border: 1px solid black;
 }
-section > footer{
+article > footer{
 	border: 1px dotted black;
 	font-style: italic;
 	margin-top: 1rem;
 }
-section > footer > time{
+article > footer > time{
 	float: right;
 	margin-right:0.5rem;
 }
