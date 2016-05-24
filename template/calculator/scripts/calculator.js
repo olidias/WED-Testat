@@ -1,7 +1,7 @@
 /**
  * core
  */
-
+/** Aufrufe der Objekte mit .this nicht möglich, da der Context nicht stimmt. .this bezieht sich auf das Element im DOM-Tree (fieldSet) **/
 document.calculator = {
     newNumber: "",
     oldNumber: "",
@@ -10,49 +10,53 @@ document.calculator = {
 
     click: function (event) {
         var buttonClass = event.target.getAttribute("class");
-        if (buttonClass == "number") {
+        switch(buttonClass){
+            case "number":
             document.calculator.newNumber = 10 * document.calculator.newNumber + parseInt(event.target.getAttribute('value'));
             document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
-        }
-        if (buttonClass == "operator") {
-            document.calculator.operator = event.target.getAttribute('value');
-            if (document.calculator.oldNumber == "") {
-                document.calculator.oldNumber = document.calculator.newNumber;
-                document.calculator.newNumber = "";
+                break;
+            case "operator":
+                document.calculator.operator = event.target.getAttribute('value');
+                if (document.calculator.oldNumber == "") {
+                    document.calculator.oldNumber = document.calculator.newNumber;
+                    document.calculator.newNumber = "";
+                }
+                document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+                break;
+            case "command":
+                var command = event.target.getAttribute('id');
+                if (command == "key-=") {
+                    document.calculator.calculate();
+                }
+                else if (command == "key-c") {
+                    document.calculator.newNumber = "";
+                    document.calculator.oldNumber = "";
+                    document.calculator.operator = "";
+                    document.calculator.result = "";
+                    document.ui.clear();
             }
-            document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
-        }
-        if (buttonClass == "command") {
-            var command = event.target.getAttribute('id');
-            if (command == "key-=") {
-                document.calculator.calculate();
-            }
-            if (command == "key-c") {
-                document.calculator.newNumber = "";
-                document.calculator.oldNumber = "";
-                document.calculator.operator = "";
-                document.calculator.result = "";
-                document.ui.clear();
-            }
+                break;
         }
     },
     calculate: function (event) {
-        if (document.calculator.operator == "+") {
-            document.calculator.result = document.calculator.oldNumber + document.calculator.newNumber;
-        }
-        if (document.calculator.operator == "-") {
-            document.calculator.result = document.calculator.oldNumber - document.calculator.newNumber;
-        }
-        if (document.calculator.operator == "/") {
-            if (document.calculator.newNumber == 0) {
-                document.calculator.result = "Division by Zero";
-            }
-            else {
-                document.calculator.result = document.calculator.oldNumber / document.calculator.newNumber;
-            }
-        }
-        if (document.calculator.operator == "*") {
-            document.calculator.result = document.calculator.oldNumber * document.calculator.newNumber;
+        switch(document.calculator.operator) {
+            case "+":
+                document.calculator.result = document.calculator.oldNumber + document.calculator.newNumber;
+                break;
+            case "-":
+                document.calculator.result = document.calculator.oldNumber - document.calculator.newNumber;
+                break;
+            case "/":
+                if (document.calculator.newNumber == 0) {
+                    document.calculator.result = "Division by Zero";
+                }
+                else {
+                    document.calculator.result = document.calculator.oldNumber / document.calculator.newNumber;
+                }
+                break;
+            case "*":
+                document.calculator.result = document.calculator.oldNumber * document.calculator.newNumber;
+                break;
         }
         document.calculator.oldNumber = "";
         document.calculator.newNumber = document.calculator.result;
