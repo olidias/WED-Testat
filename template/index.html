@@ -2,22 +2,25 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="author" content="Oli Dias, Nico Vinzens"/>
+		<meta name="author" content="Wikipraktika"/>
 		<meta name="publisher" content="Wikipraktika"/>
 		<meta name="description" content="Wikipraktika: Taschenrechner"/>
 		<title>Wikipraktika | Taschenrechner - tragbare, handliche elektronische Rechenmaschine</title>
 		<link rel="stylesheet" type="text/css" href="./styles/styles.css">
+		<!-- TODO: CSS -->
+		<link rel="icon" type="image/png" href="../media/icon-wikipraktika.png">
 	</head>
 	<body>
 		<header>
-			<h1>
-				<a href="index.html"><img src="../media/logo-wikipraktika.svg" height="100" width="100" alt="Wikipraktika Logo"/></a>Wikipraktika
-			</h1>
+
+				<a href="index.html">
+					<img src="../media/logo-wikipraktika.svg" height="100" width="100" alt="Wikipraktika Logo"/>
+				</a>
+			<!-- separated a and h1 tag. CSS needs to be adjusted-->
+			<h1>Wikipraktika</h1>
 		</header>
-		<header>
+		<nav>
 			<h2>Navigation</h2>
-		</header>
-			<nav>
 				<ul>
 					<li><a href="/de/">Hauptseite</a></li>
 					<li><a href="/de/topics/">Themenportale</a></li>
@@ -59,10 +62,11 @@
 					   id="font-slider" />
 				<output name="font-size" id="font-size">1</output>
 			</form>
-			<section id="taschenrechner">
+			<section>
 				<header>
 					<h2>Taschenrechner</h2>
 				</header>
+				<article id="taschenrechner">
 					<header>
 						<h3>Taschenrechner</h3>
 					</header>
@@ -84,9 +88,7 @@
 								</div>
 							</figcaption>
 						</figure>
-					<header>
 						<h4>Geschichte</h4>
-					</header>
 						<p>
 							Bereits vor der Einführung der elektronischen Taschenrechner gab es einen Bedarf nach
 							tragbaren Rechenhilfen. Dieser wurde mit mechanischen Taschenrechnern und Rechenschiebern
@@ -131,9 +133,7 @@
 							Vor allem Hewlett Packard und Texas Instruments entwickelten ab 1974 auch programmierbare
 							Taschenrechner.
 						</p>
-					<header>
 						<h4>Numerische Genauigkeit</h4>
-					</header>
 						<p>
 							Auch wenn heutige Taschenrechner im Regelfall kaum Programmfehler bei einfachen Berechnungen
 							aufweisen, lassen sich zwischen verschiedenen Taschenrechnermodellen unterschiedliche
@@ -154,22 +154,22 @@
 								Source Wikipedia: <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
 							</small>
 						</div>
-				</section>
-				<section id="Demonstration">
+				</article>
+				<article id="Demonstration">
 					<header>
 						<h3>Demonstration</h3>
 					</header>
 					<iframe src="calculator/index.html" scrolling="no"></iframe>
-				</section>
-				<section id="Bedienung">
+				</article>
+				<article id="Bedienung">
 					<header>
 						<h3>Bedienung des TI-Nspire CX CAS</h3>
 					</header>
 					<figure>
-						<video controls role="application" poster="../media/ti-nspire-cx-cas.png">
+						<video controls poster="../media/ti-nspire-cx-cas.png">
 							<source src="../media/TI-Nspire CX CAS 3D Model.mp4" role="presentation"/>
 							<source src="../media/TI-Nspire CX CAS 3D Model.webm" role="presentation"/>
-							<track src="../media/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en" role="presentation" label="English" default />
+							<track src="../media/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en" label="English" default />
 						</video>
 						<figcaption>
 							<small>TI-Nspire CX CAS Demonstration</small>
@@ -185,7 +185,8 @@
 							<time datetime="2016-02-11 12:45">Donnerstag, 11. Februar 2016, 12:45</time>
 						</small>
 					</footer>
-							<section id="Varianten">
+					</article>
+					<article id="Varianten">
 								<header>
 									<h3>Taschenrechnervarianten</h3>
 								</header>
@@ -224,24 +225,25 @@
 										Taschenrechnervarianten, Source Wikipedia: <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
 									</small>
 								</div>
-							</section>
-					<footer>
-						<small>
-							<span>Zuletzt geändert von Gabriela Kant</span>
-							<time datetime="2016-02-11 12:45">Donnerstag, 11. Februar 2016, 10:09</time>
-						</small>
-					</footer>
-				<section id="Zeitgewinn">
+								<footer>
+									<small>
+										<span>Zuletzt geändert von Gabriela Kant</span>
+										<time datetime="2016-02-11 12:45">Donnerstag, 11. Februar 2016, 10:09</time>
+									</small>
+								</footer>
+					</article>
+				<article id="Zeitgewinn">
 					<header>
 						<h3>Zeitgewinn</h3>
 					</header>
-					<div id="tableCaption">Zeitgewinn durch Benutzung eines Taschenrechners</div>
 						<table>
+							<caption>Zeitgewinn durch Benutzung eines Taschenrechners</caption>
 							<thead>
 							<tr>
 								<th></th><th>2-Stellen</th><th>3-Stellen</th><th>4-Stellen</th>
 							</tr>
 							</thead>
+							<tbody>
 							<tr>
 								<th>Addition / Subtraktion</th><td>4</td><td>8</td><td>20</td>
 							</tr>
@@ -263,6 +265,7 @@
 							<tr>
 								<th>Potenzieren</th><td>25</td><td>75</td><td>550</td>
 							</tr>
+							</tbody>
 						</table>
 					<figure>
 						<object data="../media/zeitgewinn.svg" height="1052" width="744" role="application"></object>
@@ -273,13 +276,13 @@
 						<time datetime="2016-02-29 13:02 ">Freitag, 29. Februar 2016, 13:02</time>
 						</small>
 					</footer>
-				</section>
-				<section id="calcTricks">
+				</article>
+				<article id="calcTricks">
 					<header>
 						<h3>iPhone calculator tricks</h3>
 					</header>
 					<figure>
-						<iframe src="https://www.youtube.com/embed/a7rcVgb41-0" allowfullscreen></iframe>
+						<iframe width="1280" height="720" src="https://www.youtube.com/embed/a7rcVgb41-0" allowfullscreen></iframe>
 						<figcaption>iPhone Calculator Tricks  on YouTube: <a href="https://www.youtube.com/watch?v=a7rcVgb41-0">youtube.com/watch?v=a7rcVgb41-0</a></figcaption>
 					</figure>
 					<footer>
@@ -288,8 +291,8 @@
 							<time datetime="2016-02-10 18:39">Donnerstag, 10. Februar 2016, 18:38</time>
 						</small>
 					</footer>
-				</section>
-				<section>
+				</article>
+				<article>
 					<header>
 						<h3>Die besten und schlechtesten Taschenrechner</h3>
 					</header>
@@ -311,8 +314,8 @@
 							<time datetime="2016-02-11 14:13">Donnerstag, 11. Februar 2016, 14:13</time>
 						</small>
 					</footer>
-				</section>
-				<section>
+				</article>
+				<article>
 					<header>
 						<h3>Taschenrechner suchen nach Modell</h3>
 					</header>
@@ -325,11 +328,11 @@
 							<option value="HG Calc++">HG Calc++</option>
 							<option value="HG GO-ON">HG GO-ON</option>
 						</datalist>
-						<input type="text" id="search" value="" name="searchinput" aria-label="suche" list="searches"/>
+						<input type="search" id="search" name="searchinput" aria-label="suche" list="searches"/>
 						<button id="calculatorSearchBtn" class="stylisedButton" type="submit" value="Search">
 						</button>
 					</form>
-				</section>
+				</article>
 			</section>
 			<section>
 				<header>
@@ -391,12 +394,12 @@
 		<footer id="pagefooter">
 			<address>Bahnhofstrasse 42, 8000 Zürich</address>
 			<p>
-				<a href="url">+055 444 33 22</a>
-				<a href="url">info@wikipraktika.com</a>
+				<a href="tel:+415544443322">+055 444 33 22</a>
+				<a href="mailto:info@wikipraktika.com">info@wikipraktika.com</a>
 			</p>
 			<p>
 				<small>
-					Alle Inhalte von Wikipraktika stehen unter der <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="CC Logo"/>
+					Alle Inhalte von Wikipraktika stehen unter der <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons Attribution-ShareAlike 4.0 International License"/>
 					<a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 					 und dürfen nur mit Nennung des Autors weiterverwendet werden.
 				</small>
