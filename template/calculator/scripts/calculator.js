@@ -1,72 +1,79 @@
 /**
  * core
  */
+function Memory() {
+    this.newNumber = "";
+    this.oldNumber = "";
+    this.operator = "";
+    this.result = "";
+}
+var memory = new Memory();
 /** Aufrufe der Objekte mit .this nicht möglich, da der Context nicht stimmt. .this bezieht sich auf das Element im DOM-Tree (fieldSet) **/
-document.calculator = {
-    newNumber: "",
-    oldNumber: "",
-    operator: "",
-    result: "",
-
+var calculator = {
     click: function (event) {
         var buttonClass = event.target.getAttribute("class");
-        switch(buttonClass){
+        switch(buttonClass) {
             case "number":
-            document.calculator.newNumber = 10 * document.calculator.newNumber + parseInt(event.target.getAttribute('value'));
-            document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+                if (memory.newNumber >= 0) {
+                memory.newNumber = 10 * memory.newNumber + parseInt(event.target.getAttribute('value'));
+                }
+                else {
+                    memory.newNumber = 10* memory.newNumber - parseInt(event.target.getAttribute('value'));
+                }
+            ui.display(memory.oldNumber, memory.operator, memory.newNumber);
                 break;
             case "operator":
-                document.calculator.operator = event.target.getAttribute('value');
-                if (document.calculator.oldNumber == "") {
-                    document.calculator.oldNumber = document.calculator.newNumber;
-                    document.calculator.newNumber = "";
+                memory.operator = event.target.getAttribute('value');
+                if (memory.oldNumber == "") {
+                    memory.oldNumber = memory.newNumber;
+                    memory.newNumber = "";
                 }
-                document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+                ui.display(memory.oldNumber, memory.operator, memory.newNumber);
                 break;
             case "command":
                 var command = event.target.getAttribute('id');
                 if (command == "key-=") {
-                    document.calculator.calculate();
+                    calculator.calculate();
                 }
                 else if (command == "key-c") {
-                    document.calculator.newNumber = "";
-                    document.calculator.oldNumber = "";
-                    document.calculator.operator = "";
-                    document.calculator.result = "";
-                    document.ui.clear();
+                    memory.newNumber = "";
+                    memory.oldNumber = "";
+                    memory.operator = "";
+                    memory.result = "";
+                    ui.clear();
             }
                 break;
         }
     },
     calculate: function (event) {
-        switch(document.calculator.operator) {
+        switch(memory.operator) {
             case "+":
-                document.calculator.result = document.calculator.oldNumber + document.calculator.newNumber;
+                memory.result = memory.oldNumber + memory.newNumber;
                 break;
             case "-":
-                document.calculator.result = document.calculator.oldNumber - document.calculator.newNumber;
+                memory.result = memory.oldNumber - memory.newNumber;
                 break;
             case "/":
-                if (document.calculator.newNumber == 0) {
-                    document.calculator.result = "Division by Zero";
+                if (memory.newNumber == 0) {
+                    memory.result = "Division by Zero";
                 }
                 else {
-                    document.calculator.result = document.calculator.oldNumber / document.calculator.newNumber;
+                    memory.result = memory.oldNumber / memory.newNumber;
                 }
                 break;
             case "*":
-                document.calculator.result = document.calculator.oldNumber * document.calculator.newNumber;
+                memory.result = memory.oldNumber * memory.newNumber;
                 break;
         }
-        document.calculator.oldNumber = "";
-        document.calculator.newNumber = document.calculator.result;
-        document.calculator.operator = "";
-        if (document.calculator.result == "Division by Zero") {
-            document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
-            document.calculator.newNumber = "";
+        memory.oldNumber = "";
+        memory.newNumber = memory.result;
+        memory.operator = "";
+        if (memory.result == "Division by Zero") {
+            ui.display(memory.oldNumber, memory.operator, memory.newNumber);
+            memory.newNumber = "";
         }
         else {
-            document.ui.display(document.calculator.oldNumber, document.calculator.operator, document.calculator.newNumber);
+            ui.display(memory.oldNumber, memory.operator, memory.newNumber);
         }
     }
 };
@@ -74,14 +81,14 @@ document.calculator = {
 /**
  * UI
  */
-document.ui = {
+var ui = {
     init: function () {
         this.input = document.querySelector("#input");
         this.output = document.querySelector("#output");
         this.input.innerHTML = "Welcome";
         this.initKey = document.querySelectorAll("button[type=button]")[0].parentElement;
-        this.buttons = document.ui.initKey;
-        this.buttons.addEventListener('click', document.calculator.click);
+        this.buttons = ui.initKey;
+        this.buttons.addEventListener('click', calculator.click);
 
     },
     clear: function () {
@@ -96,5 +103,5 @@ document.ui = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.ui.init();
+    ui.init();
 });
