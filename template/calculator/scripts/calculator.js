@@ -1,5 +1,5 @@
 /**
- * core
+ * Memory
  */
 function Memory() {
     this.newNumber = "";
@@ -7,8 +7,12 @@ function Memory() {
     this.operator = "";
     this.result = "";
 }
+
 var memory = new Memory();
-/** Aufrufe der Objekte mit .this nicht möglich, da der Context nicht stimmt. .this bezieht sich auf das Element im DOM-Tree (fieldSet) **/
+
+/**
+ * core
+ */
 var calculator = {
     click: function (event) {
         var buttonClass = event.target.getAttribute("class");
@@ -20,7 +24,7 @@ var calculator = {
                 else {
                     memory.newNumber = 10* memory.newNumber - parseInt(event.target.getAttribute('value'));
                 }
-            ui.display(memory.oldNumber, memory.operator, memory.newNumber);
+            calculator.display(memory.oldNumber, memory.operator, memory.newNumber);
                 break;
             case "operator":
                 memory.operator = event.target.getAttribute('value');
@@ -28,7 +32,7 @@ var calculator = {
                     memory.oldNumber = memory.newNumber;
                     memory.newNumber = "";
                 }
-                ui.display(memory.oldNumber, memory.operator, memory.newNumber);
+                calculator.display(memory.oldNumber, memory.operator, memory.newNumber);
                 break;
             case "command":
                 var command = event.target.getAttribute('id');
@@ -40,7 +44,7 @@ var calculator = {
                     memory.oldNumber = "";
                     memory.operator = "";
                     memory.result = "";
-                    ui.clear();
+                    calculator.clear();
             }
                 break;
         }
@@ -69,12 +73,21 @@ var calculator = {
         memory.newNumber = memory.result;
         memory.operator = "";
         if (memory.result == "Division by Zero") {
-            ui.display(memory.oldNumber, memory.operator, memory.newNumber);
+            calculator.display(memory.oldNumber, memory.operator, memory.newNumber);
             memory.newNumber = "";
         }
         else {
-            ui.display(memory.oldNumber, memory.operator, memory.newNumber);
+            calculator.display(memory.oldNumber, memory.operator, memory.newNumber);
         }
+    },
+    clear: function () {
+        ui.input.innerHTML = "";
+        ui.output.innerHTML = "";
+    },
+    display: function (oldNumber, operator, newNumber) {
+        ui.output.innerHTML = oldNumber + " " +  operator;
+        ui.input.innerHTML =  newNumber;
+
     }
 };
 
@@ -89,15 +102,6 @@ var ui = {
         this.initKey = document.querySelectorAll("button[type=button]")[0].parentElement;
         this.buttons = ui.initKey;
         this.buttons.addEventListener('click', calculator.click);
-
-    },
-    clear: function () {
-        this.input.innerHTML = "";
-        this.output.innerHTML = "";
-    },
-    display: function (oldNumber, operator, newNumber) {
-        this.output.innerHTML = oldNumber + " " +  operator;
-        this.input.innerHTML =  newNumber;
 
     }
 };
