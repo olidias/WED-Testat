@@ -15,9 +15,12 @@ body {
 	margin: 2.5rem;
 	counter-reset:h3;
 }
-nav{
+nav > ul{
 	border: 2px solid #659EC5;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	margin-left: -0.75rem;
+	margin-top: 1rem;
 }
 header{
 	margin-bottom: 1rem;
@@ -30,6 +33,7 @@ header > h1{
 	height: 5rem;
 	padding-top: 1rem;
 	padding-left: 7.5rem;
+	margin-bottom: 2rem;
 }
 header > h2{
 	margin-top: 2rem;
@@ -43,11 +47,10 @@ h3::before{
 	content: counter(h3) " ";
 }
 
-h1 > a > img{
-	padding: 0.75rem;
-	margin-top: -1.2rem;
-	margin-left:-7.5rem;
-	position: absolute;
+header > a{
+	float:left;
+	margin-left: 0.4rem;
+	margin-top: 0.4rem;
 }
 #pagefooter{
 	background-color: #0060A0;
