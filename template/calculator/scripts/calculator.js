@@ -15,13 +15,16 @@ var memory = new Memory();
  */
 var calculator = {
     numberHandler: function(number) {
-        if (number >= 0 && memory.operator != "-") {
+        if (memory.result != "") {
+            memory.newNumber = "";
+            memory.result = "";
+            memory.newNumber = number;
+        }
+         else if (memory.newNumber >= 0) {
             memory.newNumber = 10 * memory.newNumber + number;
-            return memory.newNumber;
         }
         else {
-            memory.newNumber = 10* memory.newNumber + number;
-            return memory.newNumber;
+            memory.newNumber = 10* memory.newNumber - number;
         }
     },
     operatorHandler: function(newOperator) {
@@ -30,35 +33,20 @@ var calculator = {
             memory.newNumber = "";
         }
         memory.operator = newOperator;
-        var returnArray = [];
-        returnArray[0] = memory.oldNumber;
-        returnArray[1] = memory.operator;
-        returnArray[2] = memory.newNumber;
-        return returnArray;
     },
     commandHandler: function(command) {
         var returnArray = [];
         if (command == "key-=") {
             calculator.calculate();
-            returnArray[0] = memory.oldNumber;
-            returnArray[1] = memory.operator;
-            returnArray[2] = memory.oldNumber;
-            returnArray[4] = memory.result;
-            return returnArray;
         }
         else if (command == "key-c") {
             memory.newNumber = "";
             memory.oldNumber = "";
             memory.operator = "";
             memory.result = "";
-            returnArray[0] = memory.oldNumber;
-            returnArray[1] = memory.operator;
-            returnArray[2] = memory.oldNumber;
-            returnArray[4] = memory.result;
-            return command;
         }
     },
-    calculate: function (event) {
+    calculate: function () {
         switch(memory.operator) {
             case "+":
                 memory.result = memory.oldNumber + memory.newNumber;
@@ -81,9 +69,6 @@ var calculator = {
         memory.oldNumber = "";
         memory.newNumber = memory.result;
         memory.operator = "";
-        if (memory.result == "Division by Zero") {
-            memory.newNumber = "";
-        }
     }
 };
 
@@ -104,12 +89,12 @@ var ui = {
             switch(buttonClass) {
                 case "number":
                     this.number = parseInt(event.target.getAttribute('value'));
-                    this.numberReturn = calculator.numberHandler(this.number);
+                    calculator.numberHandler(this.number);
                     ui.display();
                     break;
                 case "operator":
                     this.operator = event.target.getAttribute('value');
-                    this.operatorReturn = calculator.operatorHandler(this.operator);
+                    calculator.operatorHandler(this.operator);
                     ui.display();
                     break;
                 case "command":
