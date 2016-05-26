@@ -74,7 +74,6 @@ article > footer > time{
 }
 figcaption{
 	color: gray;
-	width: 380px;
 }
 figcaption > p {
 	margin-top: 1rem;
@@ -92,14 +91,13 @@ figure > div {
 
 #taschenrechner > figure{
 	float:left;
-	position: relative;
 	margin-right: 1rem;
-	width: 307px;
-	height: 310px;
+	width: 20%;
+	height: 30%;
 }
 figure > img{
-	width: 307px;
-	height: 222px;
+	height: 100%;
+	width: 100%;
 }
 figure > video{
 	width: 100%;
