@@ -20,7 +20,7 @@ var calculator = {
             return memory.newNumber;
         }
         else {
-            memory.newNumber = 10* memory.newNumber - number;
+            memory.newNumber = 10* memory.newNumber + number;
             return memory.newNumber;
         }
     },
@@ -82,11 +82,7 @@ var calculator = {
         memory.newNumber = memory.result;
         memory.operator = "";
         if (memory.result == "Division by Zero") {
-            calculator.display(memory.oldNumber, memory.operator, memory.newNumber);
             memory.newNumber = "";
-        }
-        else {
-            calculator.display(memory.oldNumber, memory.operator, memory.newNumber);
         }
     }
 };
@@ -118,12 +114,12 @@ var ui = {
                     break;
                 case "command":
                     this.command = event.target.getAttribute('id');
-                    this.commandReturn = calculator.commandHandler(this.command);
+                    calculator.commandHandler(this.command);
                     if (this.command == "key-c") {
                         ui.clear();
                     }
                     else if (this.command == "key-=") {
-                        calculator.commandHandler(this.command);
+
                         ui.display();
 
                     }
